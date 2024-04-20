@@ -1,0 +1,40 @@
+// src/lib.rs
+use cosmwasm_std::{entry_point, DepsMut, Env, MessageInfo, Response, StdResult};
+use kujira::{KujiraMsg, KujiraQuery};
+
+#[entry_point]
+pub fn instantiate(
+    deps: DepsMut<KujiraQuery>,
+    env: Env,
+    info: MessageInfo,
+    _msg: InstantiateMsg,
+) -> StdResult<Response<KujiraMsg>> {
+    // Contract instantiation logic goes here
+
+    Ok(Response::new())
+}
+
+#[entry_point]
+pub fn execute(
+    deps: DepsMut<KujiraQuery>,
+    env: Env,
+    info: MessageInfo,
+    _msg: ExecuteMsg,
+) -> StdResult<Response<KujiraMsg>> {
+    // Contract execution logic goes here
+
+    Ok(Response::new())
+}
+
+#[entry_point]
+pub fn query(
+    deps: Deps<KujiraQuery>,
+    env: Env,
+    _msg: QueryMsg,
+) -> StdResult<Binary> {
+    // Contract query logic goes here
+
+    Ok(Binary::default())
+}
+
+// Define your messages and error types here
